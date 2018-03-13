@@ -9,6 +9,10 @@ MatrixInterface::MatrixInterface(int colCount, int rowCount)
 {
 }
 
+MatrixInterface::MatrixInterface(const MatrixInterface & m)
+{
+}
+
 MatrixInterface::~MatrixInterface()
 {
 }

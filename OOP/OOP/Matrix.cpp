@@ -20,6 +20,13 @@ Matrix::Matrix(int colCount, int rowCount)
 	this->SetRandom();
 }
 
+Matrix::Matrix(const Matrix & m)
+{
+	this->colCount = m.colCount;
+	this->rowCount = m.rowCount;
+	this->array = m.array;
+}
+
 void Matrix::SetRandom()
 {
 	for (int i = 0; i < this->rowCount; i++)

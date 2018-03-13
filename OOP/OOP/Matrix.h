@@ -6,6 +6,7 @@ class Matrix : MatrixInterface
 public:
 	Matrix();
 	Matrix(int colCount, int rowCount);
+	Matrix(const Matrix &m);
 	~Matrix();
 	virtual void SetRandom() override;
 	virtual void Print() override;

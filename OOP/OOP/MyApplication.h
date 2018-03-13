@@ -4,7 +4,7 @@
 class MyApplication
 {
 public:
-	MyApplication();
+	MyApplication(); // Конструктор по умолчанию для меню
 	~MyApplication();
 };
 

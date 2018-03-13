@@ -3,6 +3,8 @@
 
 using namespace std;
 
+// Класс-интерфейс
+
 #pragma once
 class MatrixInterface
 {
@@ -13,6 +15,7 @@ protected:
 public:
 	MatrixInterface();
 	MatrixInterface(int colCount, int rowCount);
+	MatrixInterface(const MatrixInterface& m);
 	~MatrixInterface();
 	virtual void Print() = 0;
 	virtual void ChangeCol(int count) = 0;
