@@ -1,5 +1,5 @@
 /*
-	Конкретная реализация интерфейса класса MatrixInterface
+	Realization of class MatrixInterface
 */
 
 #include "MatrixInterface.h"
@@ -8,13 +8,14 @@
 class Matrix : public MatrixInterface
 {
 public:
-	Matrix(); // Конструктор по умолчанию
-	Matrix(int colCount, int rowCount); // Конструктор с параметрами
-	Matrix(const Matrix &m); // Конструктор копирования
-	~Matrix(); // Деструтор
+	Matrix(); // Default constructor
+	Matrix(int colCount, int rowCount); // Constructor with params
+	Matrix(const Matrix &m); // Copy constructor
+	~Matrix(); // Destructor
 
 	/*
-		Далее идёт сообщение компилятору о том, что мы определяем унаследованные функции
+		In these functions we tell the compiler that we are redefining purely virtual functions 
+		defined in interface
 	*/
 	virtual void SetRandom() override;
 	virtual void Print() override;

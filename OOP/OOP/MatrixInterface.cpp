@@ -1,4 +1,4 @@
-// Чисто для затравочки
+// Why not??
 
 #include "stdafx.h"
 #include "MatrixInterface.h"

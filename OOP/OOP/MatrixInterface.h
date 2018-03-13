@@ -3,23 +3,23 @@
 
 using namespace std;
 
-// Класс-интерфейс для наследования
+// Interface for inheriance
 
 #pragma once
 class MatrixInterface
 {
 protected:
-	int **array; // "Прототип двумерного массива"
-	int rowCount; // Количество строк
-	int colCount; // Количество столбцов
+	int **array; // Prototype for dynamic array
+	int rowCount; // Count of rows
+	int colCount; // Count of columns
 public:
-	MatrixInterface(); // Конструктор по умолчанию
-	MatrixInterface(int colCount, int rowCount); // Конструктор с параметрами
-	MatrixInterface(const MatrixInterface& m); // Конструктор копирования
-	~MatrixInterface(); // Деструктор
-	virtual void Print() = 0; // Чисто виртуальная функция вывода
-	virtual void ChangeCol(int count) = 0; // Чисто виртуальная функция изменения количества столбцов
-	virtual void ChangeRow(int count) = 0; // Чисто виртуальная функция изменения количества строк
-	virtual void PrintSubMatr(int c, int r) = 0; // Чисто виртуальная функция для вывода определённого столбца
-	virtual void SetRandom() = 0; // Чисто виртуальная функция для рандомного заполнения двумерного массива
+	MatrixInterface(); // Default constructor
+	MatrixInterface(int colCount, int rowCount); // Constructor with params
+	MatrixInterface(const MatrixInterface& m); // Copy constructor
+	~MatrixInterface(); // Destructor
+	virtual void Print() = 0; // Purely virtual function for matrix print
+	virtual void ChangeCol(int count) = 0; // Purely virtual function for changing column count
+	virtual void ChangeRow(int count) = 0; // Purely virtual function for changing row count
+	virtual void PrintSubMatr(int c, int r) = 0; // Purely virtual function for printing fixed matrix
+	virtual void SetRandom() = 0; // Purely virtual function for random filling a matrix
 };
