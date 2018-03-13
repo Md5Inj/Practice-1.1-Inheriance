@@ -15,7 +15,7 @@ MyApplication::MyApplication()
 			 << "2 - Print a array" << endl
 			 << "3 - Change column count" << endl
 			 << "4 - Change row count" << endl
-			 << "5 - Print Column" << endl
+			 << "5 - Print the sub matrix" << endl
 			 << "0 - Exit" << endl;
 		
 		cin >> input;
@@ -52,8 +52,8 @@ MyApplication::MyApplication()
 
 			case 53: // ¬вывод колонки по индексу
 			{
-				cout << "Input index of column: "; cin >> c;
-				m->PrintCol(c);
+				cout << "Input the size of sub matrix: "; cin >> c >> r;
+				m->PrintSubMatr(c, r);
 				break;
 			}
 

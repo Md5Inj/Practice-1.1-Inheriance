@@ -75,13 +75,16 @@ void Matrix::ChangeRow(int count) // Изменяем количество строк
 	this->SetRandom();
 }
 
-void Matrix::PrintCol(int pos) // Выводим определённую колонку
+void Matrix::PrintSubMatr(int c, int r) // Выводим подматрицу размером из параметров
 {
-	for (int i = 0; i < colCount; i++)
+	for (int i = 0; i < r; i++)
 	{
-		cout << this->array[pos][i] << " ";
+		for (int j = 0; j < c; j++)
+		{
+			cout << this->array[i][j] << " ";
+		}
+		cout << endl;
 	}
-	cout << endl;
 }
 
 Matrix::~Matrix() // Динамически освобождаем память от массива

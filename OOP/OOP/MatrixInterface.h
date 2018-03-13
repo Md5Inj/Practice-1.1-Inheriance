@@ -20,6 +20,6 @@ public:
 	virtual void Print() = 0; // Чисто виртуальная функция вывода
 	virtual void ChangeCol(int count) = 0; // Чисто виртуальная функция изменения количества столбцов
 	virtual void ChangeRow(int count) = 0; // Чисто виртуальная функция изменения количества строк
-	virtual void PrintCol(int pos) = 0; // Чисто виртуальная функция для вывода определённого столбца
+	virtual void PrintSubMatr(int c, int r) = 0; // Чисто виртуальная функция для вывода определённого столбца
 	virtual void SetRandom() = 0; // Чисто виртуальная функция для рандомного заполнения двумерного массива
 };

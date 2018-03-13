@@ -20,6 +20,6 @@ public:
 	virtual void Print() override;
 	virtual void ChangeCol(int count) override;
 	virtual void ChangeRow(int count) override;
-	virtual void PrintCol(int pos) override;
+	virtual void PrintSubMatr(int c, int r) override;
 };
 
