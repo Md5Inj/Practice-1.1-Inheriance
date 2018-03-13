@@ -19,5 +19,4 @@ public:
 	virtual void ChangeRow(int count) = 0;
 	virtual void PrintCol(int pos) = 0;
 	virtual void SetRandom() = 0;
-	virtual void ShowMenu() = 0;
 };
