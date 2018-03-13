@@ -1,3 +1,5 @@
+// Чисто для затравочки
+
 #include "stdafx.h"
 #include "MatrixInterface.h"
 

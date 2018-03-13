@@ -1,13 +1,21 @@
+/*
+	Конкретная реализация интерфейса класса MatrixInterface
+*/
+
 #include "MatrixInterface.h"
 
 #pragma once
-class Matrix : MatrixInterface
+class Matrix : public MatrixInterface
 {
 public:
-	Matrix();
-	Matrix(int colCount, int rowCount);
-	Matrix(const Matrix &m);
-	~Matrix();
+	Matrix(); // Конструктор по умолчанию
+	Matrix(int colCount, int rowCount); // Конструктор с параметрами
+	Matrix(const Matrix &m); // Конструктор копирования
+	~Matrix(); // Деструтор
+
+	/*
+		Далее идёт сообщение компилятору о том, что мы определяем унаследованные функции
+	*/
 	virtual void SetRandom() override;
 	virtual void Print() override;
 	virtual void ChangeCol(int count) override;

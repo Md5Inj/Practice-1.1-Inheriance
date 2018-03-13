@@ -1,12 +1,12 @@
 #include "stdafx.h"
 #include "Matrix.h"
 
-Matrix::Matrix()
+Matrix::Matrix() // Так как размера нету, просто включаем рандом
 {
 	srand((unsigned)time(0));
 }
 
-Matrix::Matrix(int colCount, int rowCount)
+Matrix::Matrix(int colCount, int rowCount) // Размер есть, создаём массив размера соответствующий параметрам
 {
 	srand((unsigned)time(0));
 	this->colCount = colCount;
@@ -17,17 +17,17 @@ Matrix::Matrix(int colCount, int rowCount)
 	{
 		this->array[i] = new int[colCount];
 	}
-	this->SetRandom();
+	this->SetRandom(); // Рандомим его
 }
 
-Matrix::Matrix(const Matrix & m)
+Matrix::Matrix(const Matrix & m) // Копируем массив и свойства из массива, который в параметрах
 {
 	this->colCount = m.colCount;
 	this->rowCount = m.rowCount;
 	this->array = m.array;
 }
 
-void Matrix::SetRandom()
+void Matrix::SetRandom() // Рандомим
 {
 	for (int i = 0; i < this->rowCount; i++)
 	{
@@ -38,7 +38,7 @@ void Matrix::SetRandom()
 	}
 }
 
-void Matrix::Print()
+void Matrix::Print() // Выводим массив
 {
 	for (int i = 0; i < this->rowCount; i++)
 	{
@@ -50,7 +50,7 @@ void Matrix::Print()
 	}
 }
 
-void Matrix::ChangeCol(int count)
+void Matrix::ChangeCol(int count) // Изменяем количество колонок
 {
 	this->colCount = count;
 	
@@ -62,7 +62,7 @@ void Matrix::ChangeCol(int count)
 	this->SetRandom();
 }
 
-void Matrix::ChangeRow(int count)
+void Matrix::ChangeRow(int count) // Изменяем количество строк
 {
 	this->rowCount = count;
 	this->array = new int*[rowCount];
@@ -75,7 +75,7 @@ void Matrix::ChangeRow(int count)
 	this->SetRandom();
 }
 
-void Matrix::PrintCol(int pos)
+void Matrix::PrintCol(int pos) // Выводим определённую колонку
 {
 	for (int i = 0; i < colCount; i++)
 	{
@@ -84,7 +84,7 @@ void Matrix::PrintCol(int pos)
 	cout << endl;
 }
 
-Matrix::~Matrix()
+Matrix::~Matrix() // Динамически освобождаем память от массива
 {
 	delete[] this->array;
 }

@@ -3,11 +3,13 @@
 
 MyApplication::MyApplication()
 {
-	Matrix *m = new Matrix(0, 0);
-	char input = 0;
-	int keyCode = 0, c = 0, r = 0;
+	Matrix *m = new Matrix(0, 0); // Создание пустой матрицы
+	char input = 0; // Переменная, хранящая символ, который ввёл юзер
+	int keyCode = 0, // Input преобразованный в int
+		c = 0, // Для изменения числа колонок, вывода колонок
+		r = 0; // Для изменения числа строк
 
-	while ((int)input != 48)
+	while ((int)input != 48) // Покуда не введён 0
 	{
 		cout << "1 - Create a array" << endl
 			 << "2 - Print a array" << endl
@@ -17,38 +19,38 @@ MyApplication::MyApplication()
 			 << "0 - Exit" << endl;
 		
 		cin >> input;
-		keyCode = (int)input;
+		keyCode = (int)input; // Перевод переменной input в числовое представление
 		
 		switch (keyCode) 
 		{
-			case 49: 
+			case 49: // Инициализация матрицы 
 			{
 				cout << "Input column and row count: "; cin >> c >> r;
 				m = new Matrix(c, r);
 				break;
 			}
 
-			case 50:
+			case 50: // Вывод матрицы
 			{
 				m->Print();
 				break;
 			}
 
-			case 51:
+			case 51: // Изменение количества колонок
 			{
 				cout << "Input new column count: "; cin >> c;
 				m->ChangeCol(c);
 				break;
 			}
 
-			case 52:
+			case 52: // Изменение количества строк
 			{
 				cout << "Input new row count: "; cin >> r;
 				m->ChangeRow(r);
 				break;
 			}
 
-			case 53:
+			case 53: // Ввывод колонки по индексу
 			{
 				cout << "Input index of column: "; cin >> c;
 				m->PrintCol(c);
