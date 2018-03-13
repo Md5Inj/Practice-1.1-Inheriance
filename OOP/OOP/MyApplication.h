@@ -1,6 +1,5 @@
 /*
-	Класс для реализации меню управления классом Matrix.
-	Всё реализовано в конструкторе
+	Class-menu for controlling class Matrix
 */
 
 #include "Matrix.h"
@@ -9,7 +8,7 @@
 class MyApplication
 {
 public:
-	MyApplication(); // Конструктор по умолчанию для меню
+	MyApplication();
 	~MyApplication();
 };
 
